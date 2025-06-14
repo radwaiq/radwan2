@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رضوان عبدالهادي - مطور ويب محترف</title>
-    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-932BTPDMSG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-932BTPDMSG');
+</script>
     <!-- External Libraries -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -13,6 +22,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
     <style>
+    * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+}
+
         :root {
             --primary-color: #00d4ff;
             --secondary-color: #ff6b35;
@@ -111,7 +131,8 @@
         .nav-controls {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 0.3px;
+            
         }
 
         .theme-toggle, .mobile-menu-btn {
@@ -748,7 +769,7 @@
             --light-text: #333333;
             --gray-text: #666666;
             --glass-bg: rgba(255, 255, 255, 0.8);
-                        --glass-border: rgba(0, 0, 0, 0.1);
+            --glass-border: rgba(0, 0, 0, 0.1);
         }
 
         /* Responsive Design */
@@ -1052,6 +1073,529 @@ body.light-mode .timeline-card.past {
 body.light-mode .timeline-card.present {
     background: linear-gradient(135deg, rgba(34, 139, 34, 0.1), rgba(50, 205, 50, 0.05));
 }
+/* قسم الشهادات الجديد */
+.certificates-section {
+  
+  
+  
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.certificates-section h2 {
+  color: #667eea;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.certificate-container {
+    width: 100%;
+    max-width: 500px;
+    min-height: 250px;
+    max-height: 400px;
+    backgrond-color: #f8f9fa;
+    box-shaow: 0 15px 35px rgba(0,0,0,0.1);
+    borer-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px auto;
+    borer: 3px solid #e9ecef;
+    padding: 10px;
+}
+
+.certificate {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: block;
+}
+
+.certificate:hover {
+    transform: scale(1.02);
+}
+/* للشهادات العرضية (Landscape) */
+.certificate-container.landscape {
+    height: 300px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: white;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.eye-icon:hover {
+  opacity: 1;
+  background: rgba(0,0,0,0.5);
+  transform: scale(1.1);
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.arrow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  background: linear-gradient(145deg, #f0f0f0, #d0d0d0);
+}
+
+.arrow:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.indicator {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row; /* إضافة هذا السطر */
+}
+.certificates-section {
+    direction: ltr; /* إضافة هذا السطر */
+}
+
+.certificate-title {
+    direction: rtl; /* للحفاظ على النص العربي */
+}
+
+
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(102, 126, 234, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #667eea;
+  border: none;
+}
+
+.dot.active {
+  background-color: #667eea;
+  transform: scale(1.2);
+  color: white;
+}
+
+.certificate-title {
+  color: #667eea;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 25px;
+  padding: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+  overflow: hidden;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: scale(0.8) translateY(50px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: rgba(255,255,255,0.2);
+  transform: rotate(90deg);
+}
+
+.modal-image-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.modal-image:hover {
+  transform: scale(1.02);
+}
+
+.modal-footer {
+  background: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-top: 1px solid #e9ecef;
+}
+
+.modal-button {
+  background: linear-gradient(145deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  min-width: 120px;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.modal-button:hover {
+  background: linear-gradient(145deg, #5561c9, #5a3f8a);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.modal-button.share-btn {
+  background: linear-gradient(145deg, #28a745, #20c997);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.modal-button.share-btn:hover {
+  background: linear-gradient(145deg, #218838, #1ea080);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+}
+
+.modal-button.download-btn {
+  background: linear-gradient(145deg, #fd7e14, #e63946);
+  box-shadow: 0 5px 15px rgba(253, 126, 20, 0.3);
+}
+
+.modal-button.download-btn:hover {
+  background: linear-gradient(145deg, #e8590c, #d00000);
+  box-shadow: 0 8px 25px rgba(253, 126, 20, 0.4);
+}
+.modal-contact {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+    }
+        .modal-contact .modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.modal-contact .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-contact .close:hover,
+.modal-contact .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-contact .modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  color: #333; /* لون النص داخل المودال */
+}
+
+.modal-contact input,
+.modal-contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;  /* لون النص داخل الحقول */
+  background-color: #fff; /* لون خلفية الحقول */
+}
+
+.modal-contact input::placeholder,
+.modal-contact textarea::placeholder {
+  color: #999; /* لون النص الإرشادي */
+}
+
+.modal-contact button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-contact button[type="submit"]:hover {
+  background-color: #45a049;
+}
+/* رسالة الترحيب */
+.welcome-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+}
+
+.welcome-bubble.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+}
+
+.bubble-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    max-width: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.bubble-container::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #667eea;
+    filter: drop-shadow(0 5px 10px rgba(102, 126, 234, 0.2));
+}
+
+.robot-icon {
+    flex-shrink: 0;
+    animation: robotBounce 2s infinite;
+}
+
+@keyframes robotBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+.message-content {
+    color: white;
+    flex-grow: 1;
+}
+
+.message-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.message-content p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* تأثيرات إضافية */
+.welcome-bubble::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0.3;
+    animation: glow 3s infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* تجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .welcome-bubble {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+    }
+    
+    .bubble-container {
+        max-width: none;
+    }
+    
+    .bubble-container::before {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
 
     </style>
 </head>
@@ -1071,15 +1615,20 @@ body.light-mode .timeline-card.present {
                 <li><a href="#projects" onclick="scrollToSection('projects')">مشاريعي</a></li>
                 <li><a href="#contact" onclick="scrollToSection('contact')">تواصل</a></li>
             </ul>
-            
-            <div class="nav-controls">
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+<div class="nav-controls">
+  <a class="theme-toggle" href="https://t.me/m/XITJPM_nNTQy" target="_blank">
+    <i class="fab fa-telegram-plane"></i>
+  </a>
+  <button class="theme-toggle">
+    <i class="fas fa-language"></i>
+  </button>
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+  </button>
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars"></i>
+  </button>
+</div>
         </div>
         
         <!-- Mobile Menu -->
@@ -1093,7 +1642,8 @@ body.light-mode .timeline-card.present {
             </ul>
         </div>
     </nav>
-        <!-- Hero Section -->
+
+    <!-- Hero Section -->
     <section id="home">
         <div class="hero-content">
             <div class="hero-avatar">
@@ -1159,19 +1709,19 @@ body.light-mode .timeline-card.present {
             <!-- Stats Container -->
             <div class="stats-container">
                 <div class="stat-card">
-                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-number" data-count="7">0</span>
                     <div class="stat-label">سنوات الخبرة</div>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number" data-count="50">0</span>
+                    <span class="stat-number" data-count="136">0</span>
                     <div class="stat-label">مشروع مكتمل</div>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number" data-count="30">0</span>
+                    <span class="stat-number" data-count="500">0</span>
                     <div class="stat-label">عميل راضي</div>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number" data-count="15">0</span>
+                    <span class="stat-number" data-count="25">0</span>
                     <div class="stat-label">تقنية متقنة</div>
                 </div>
             </div>
@@ -1200,6 +1750,26 @@ body.light-mode .timeline-card.present {
 </div>
 
     </section>
+    
+<!-- Certificates Section -->
+<section class="certificates-section">
+  <h2>شهاداتي المهنية</h2>
+  <div class="certificate-container">
+    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop" alt="شهادة" class="certificate" id="certificate">
+    <svg class="eye-icon" id="eyeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+    </svg>
+  </div>
+  
+  <div class="controls">
+    <div class="arrow" id="prev">&#8249;</div>
+    <div class="indicator" id="indicator"></div>
+    <div class="arrow" id="next">&#8250;</div>
+  </div>
+  
+  <div class="certificate-title" id="certificateTitle">شهادة إتمام الدورة - 1 من 5</div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills">
@@ -1371,7 +1941,7 @@ body.light-mode .timeline-card.present {
                                 <i class="fas fa-external-link-alt"></i>
                                 معاينة
                             </a>
-                            <a href="#" class="project-link">
+                                                        <a href="#" class="project-link">
                                 <i class="fab fa-github"></i>
                                 الكود
                             </a>
@@ -1395,7 +1965,7 @@ body.light-mode .timeline-card.present {
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h4 class="contact-title">البريد الإلكتروني</h4>
-                        <p class="contact-text">radwan_help@gmail.com</p>
+                        <p class="contact-text">radwan@example.com</p>
                     </div>
                     
                     <div class="contact-item">
@@ -1403,7 +1973,7 @@ body.light-mode .timeline-card.present {
                             <i class="fas fa-phone"></i>
                         </div>
                         <h4 class="contact-title">الهاتف</h4>
-                        <p class="contact-text">+9647511485389</p>
+                        <p class="contact-text">+964 123 456 789</p>
                     </div>
                     
                     <div class="contact-item">
@@ -1411,7 +1981,7 @@ body.light-mode .timeline-card.present {
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h4 class="contact-title">الموقع</h4>
-                        <p class="contact-text">العراق،بغداد</p>
+                        <p class="contact-text">العراق، بغداد</p>
                     </div>
                 </div>
                 
@@ -1440,38 +2010,40 @@ body.light-mode .timeline-card.present {
     <div id="wormhole"></div>
 
     <!-- Contact Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeContactModal()">&times;</span>
-            <h2>تواصل معي</h2>
-            <form id="contactForm" action="https://formspree.io/f/xjkrwyyp" method="POST">
-    <input type="hidden" name="_next" value="index.html">
-    
+<div id="contactModal" class="modal-contact">
+  <div class="modal-content">
+    <span class="close" onclick="closeContactModal()">&times;</span>
+    <h2>تواصل معي</h2>
+    <!-- بقية النموذج -->
+            
+<!-- تم التعديل على الفورم فقط -->
+<form action="https://formspree.io/f/mqabprzy" method="POST">
     <div class="form-group">
         <label for="name">الاسم</label>
         <input type="text" id="name" name="name" placeholder="اسمك الكريم" required>
     </div>
-    
+
     <div class="form-group">
         <label for="email">البريد الإلكتروني</label>
         <input type="email" id="email" name="email" placeholder="your@email.com" required>
     </div>
-    
+
     <div class="form-group">
         <label for="subject">الموضوع</label>
         <input type="text" id="subject" name="subject" placeholder="موضوع الرسالة" required>
     </div>
-    
+
     <div class="form-group">
         <label for="message">الرسالة</label>
         <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
     </div>
-    
+
     <button type="submit" class="btn btn-primary">
         <i class="fas fa-paper-plane"></i>
         إرسال الرسالة
     </button>
 </form>
+
         </div>
     </div>
 
@@ -1695,14 +2267,8 @@ body.light-mode .timeline-card.present {
         });
 
         // Wormhole effect
-        function activateWormhole() {
-            const wormhole = document.getElementById('wormhole');
-            wormhole.classList.add('active');
-            
-            setTimeout(() => {
-                wormhole.classList.remove('active');
-            }, 1000);
-        }
+        
+
 
         // Contact modal
         function openContactModal() {
@@ -1778,5 +2344,408 @@ timelineCards.forEach(card => {
 });
 
     </script>
+    <!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span id="modalTitle">عرض الشهادة</span>
+      <span class="modal-close" id="modalClose">&times;</span>
+    </div>
+    <div class="modal-image-container">
+      <img src="" alt="شهادة كبيرة" class="modal-image" id="modalImage">
+    </div>
+    <div class="modal-footer">
+      <button class="modal-button share-btn" id="shareBtn">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+        </svg>
+        مشاركة
+      </button>
+      <button class="modal-button download-btn" id="downloadBtn">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+        </svg>
+        تحميل
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+const certificates = [
+    { url: 'https://live.staticflickr.com/65535/54586624172_19274cfe27_b.jpg', title: 'عنوان الشهادة الأولى' },
+    { url: 'https://live.staticflickr.com/65535/54587711953_21c1913193_b.jpg', title: 'عنوان الشهادة الثانية' },
+    { url: 'https://live.staticflickr.com/65535/54587804930_d7e4b996ff_b.jpg', title: 'عنوان الشهادة الثالثة' },
+    { url: 'https://live.staticflickr.com/65535/54587680944_171bc283d7_b.jpg', title: 'عنوان الشهادة الرابعة' },
+    { url: 'https://live.staticflickr.com/65535/54586624207_f38fdb1075_b.jpg', title: 'عنوان الشهادة الخامسة' },
+    { url: 'https://live.staticflickr.com/65535/54587680969_8cf0702a0b_b.jpg', title: 'عنوان الشهادة السادسة' },
+    { url: 'https://live.staticflickr.com/65535/54586624222_c7a3350785_b.jpg', title: 'عنوان الشهادة السابعة' },
+    { url: 'https://live.staticflickr.com/65535/54587680994_d32b6a08cd_b.jpg', title: 'عنوان الشهادة الثامنة' },
+    { url: 'https://live.staticflickr.com/65535/54587681009_69448939fa_b.jpg', title: 'عنوان الشهادة التاسعة' },
+    { url: 'https://live.staticflickr.com/65535/54587805015_565e52474b_b.jpg', title: 'عنوان الشهادة العاشرة' },
+    { url: 'https://live.staticflickr.com/65535/54587712003_aac0caf969_b.jpg', title: 'عنوان الشهادة الحادية عشر' },
+    { url: 'https://live.staticflickr.com/65535/54587805025_99bfb4456c_b.jpg', title: 'عنوان الشهادة الثانية عشر' },
+    { url: 'https://live.staticflickr.com/65535/54587712013_56278b937e_b.jpg', title: 'عنوان الشهادة الثالثة عشر' },
+    { url: 'https://live.staticflickr.com/65535/54587492051_14849a89f9_b.jpg', title: 'عنوان الشهادة الرابعة عشر' },
+    { url: 'https://live.staticflickr.com/65535/54587712058_f2fa150262_b.jpg', title: 'عنوان الشهادة الخامسة عشر' },
+    { url: 'https://live.staticflickr.com/65535/54587492121_9030155eb6_b.jpg', title: 'عنوان الشهادة السادسة عشر' },
+    { url: 'https://live.staticflickr.com/65535/54587805050_2625559bee_b.jpg', title: 'عنوان الشهادة السابعة عشر' },
+    { url: 'https://live.staticflickr.com/65535/54586624317_ec00c60c26_b.jpg', title: 'عنوان الشهادة الثامنة عشر' },
+    { url: 'https://live.staticflickr.com/65535/54586624342_8bb817b1c4_b.jpg', title: 'عنوان الشهادة التاسعة عشر' },
+    { url: 'https://live.staticflickr.com/65535/54587712093_83f6e68bb6_b.jpg', title: 'عنوان الشهادة العشرون' }
+];
+
+let currentIndex = 0;
+let autoSlideInterval;
+let isInitialized = false;
+const itemsPerPage = 5;
+let currentPage = 0;
+
+window.addEventListener('load', function() {
+    initializeCertificateSlider();
+});
+
+function initializeCertificateSlider() {
+    if (isInitialized) return;
+
+    const certificateImg = document.getElementById('certificate');
+    const certificateTitle = document.getElementById('certificateTitle');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const indicatorContainer = document.getElementById('indicator');
+    const eyeIcon = document.getElementById('eyeIcon');
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalClose = document.getElementById('modalClose');
+    const shareBtn = document.getElementById('shareBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    if (!certificateImg || !prevBtn || !nextBtn || !indicatorContainer) {
+        console.error('بعض العناصر مفقودة');
+        return;
+    }
+
+    function createIndicators() {
+        indicatorContainer.innerHTML = '';
+        const start = currentPage * itemsPerPage;
+        const end = Math.min(start + itemsPerPage, certificates.length);
+        for (let i = start; i < end; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.textContent = i + 1;
+            if (i === currentIndex) dot.classList.add('active');
+            dot.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                goToSlide(i);
+            });
+            indicatorContainer.appendChild(dot);
+        }
+    }
+
+    function updateIndicators() {
+        createIndicators();
+    }
+
+    function showCertificate(index) {
+        if (certificateImg && certificateTitle) {
+            certificateImg.src = certificates[index].url;
+            certificateTitle.textContent = `${certificates[index].title} - ${index + 1} من ${certificates.length}`;
+        }
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        const newPage = Math.floor(currentIndex / itemsPerPage);
+        if (newPage !== currentPage) {
+            currentPage = newPage;
+        }
+        showCertificate(currentIndex);
+        updateIndicators();
+        resetInterval();
+    }
+
+    function nextCertificate() {
+        if (currentIndex + 1 < certificates.length) {
+            currentIndex++;
+            if (currentIndex >= (currentPage + 1) * itemsPerPage) {
+                currentPage++;
+            }
+            showCertificate(currentIndex);
+            updateIndicators();
+        } else {
+            currentIndex = 0;
+            currentPage = 0;
+            showCertificate(currentIndex);
+            updateIndicators();
+        }
+    }
+
+    function prevCertificate() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            if (currentIndex < currentPage * itemsPerPage) {
+                currentPage = Math.max(currentPage - 1, 0);
+            }
+            showCertificate(currentIndex);
+            updateIndicators();
+        } else {
+            currentIndex = certificates.length - 1;
+            currentPage = Math.floor(currentIndex / itemsPerPage);
+            showCertificate(currentIndex);
+            updateIndicators();
+        }
+    }
+
+    function openModal() {
+        if (modal && modalImage && modalTitle) {
+            modal.style.display = 'flex';
+            modalImage.src = certificates[currentIndex].url;
+            modalTitle.textContent = certificates[currentIndex].title;
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal() {
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    function resetInterval() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+        autoSlideInterval = setInterval(nextCertificate, 3000);
+    }
+
+    const newPrevBtn = prevBtn.cloneNode(true);
+    const newNextBtn = nextBtn.cloneNode(true);
+    prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
+    nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
+
+    newPrevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        prevCertificate();
+        resetInterval();
+    });
+
+    newNextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        nextCertificate();
+        resetInterval();
+    });
+
+    if (eyeIcon) {
+        eyeIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openModal();
+        });
+    }
+
+    if (certificateImg) {
+        certificateImg.addEventListener('click', openModal);
+        certificateImg.addEventListener('dragstart', (e) => e.preventDefault());
+    }
+
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    if (shareBtn) {
+        shareBtn.addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: certificates[currentIndex].title,
+                        text: 'شاهد هذه الشهادة:',
+                        url: certificates[currentIndex].url
+                    });
+                } catch (error) {
+                    console.log('تم إلغاء المشاركة أو حدث خطأ:', error);
+                }
+            } else {
+                navigator.clipboard.writeText(certificates[currentIndex].url).then(() => {
+                    alert('تم نسخ رابط الشهادة إلى الحافظة!');
+                }).catch(() => {
+                    alert('المشاركة غير مدعومة في هذا المتصفح.');
+                });
+            }
+        });
+    }
+
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', async () => {
+            try {
+                const response = await fetch(certificates[currentIndex].url);
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `${certificates[currentIndex].title.replace(/\s+/g, '_')}_${currentIndex + 1}.jpg`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                console.error('خطأ في التحميل:', error);
+                alert('حدث خطأ أثناء تحميل الصورة. يرجى المحاولة مرة أخرى.');
+            }
+        });
+    }
+
+    showCertificate(currentIndex);
+    createIndicators();
+    resetInterval();
+
+    isInitialized = true;
+}
+</script>>
+<audio id="magicAudio" src="https://media.vocaroo.com/mp3/17YVxxN4X0Kf"></audio>
+<canvas id="snowCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999; display:none;"></canvas>
+
+<script>
+function activateWormhole() {
+  // تشغيل الصوت
+  const audio = document.getElementById('magicAudio');
+  audio.play();
+
+  // اهتزاز الهاتف
+  if (navigator.vibrate) {
+    navigator.vibrate(2000);
+  }
+
+  // بوابة سحرية (لو عندك wormhole)
+  const wormhole = document.getElementById('wormhole');
+  if (wormhole) {
+    wormhole.classList.add('active');
+    setTimeout(() => wormhole.classList.remove('active'), 1000);
+  }
+
+  // الثلوج
+  const canvas = document.getElementById('snowCanvas');
+  canvas.style.display = 'block';
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const ctx = canvas.getContext('2d');
+
+  const flakes = Array.from({ length: 100 }).map(() => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 3 + 1,
+    d: Math.random() * 1 + 0.5
+  }));
+
+  function drawSnow() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'white';
+    ctx.beginPath();
+    flakes.forEach(f => {
+      ctx.moveTo(f.x, f.y);
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+    });
+    ctx.fill();
+    flakes.forEach(f => {
+      f.y += f.d;
+      if (f.y > canvas.height) {
+        f.y = 0;
+        f.x = Math.random() * canvas.width;
+      }
+    });
+  }
+
+  const interval = setInterval(drawSnow, 30);
+
+  setTimeout(() => {
+    clearInterval(interval);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.style.display = 'none';
+  }, 7000);
+}
+
+// تأكد من تحديث حجم الثلج عند تغيير حجم النافذة
+window.addEventListener('resize', () => {
+  const canvas = document.getElementById('snowCanvas');
+  if (canvas.style.display !== 'none') {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+});
+</script>
+<script>
+function openContactModal() {
+  document.getElementById('contactModal').style.display = 'block';
+}
+function closeContactModal() {
+  document.getElementById('contactModal').style.display = 'none';
+}
+</script>
+<footer style="text-align:center; padding: 20px; font-size: 14px; color: var(--gray-text);">
+  جميع الحقوق محفوظة © رضوان عبد الهادي 2025
+</footer>
+<!-- رسالة الترحيب -->
+<div id="welcomeMessage" class="welcome-bubble">
+    <div class="bubble-container">
+        <div class="robot-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" fill="#4CAF50" stroke="#fff" stroke-width="2"/>
+                <circle cx="15" cy="16" r="2" fill="#fff"/>
+                <circle cx="25" cy="16" r="2" fill="#fff"/>
+                <path d="M14 24 Q20 28 26 24" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <rect x="18" y="10" width="4" height="3" rx="2" fill="#fff"/>
+            </svg>
+        </div>
+        <div class="message-content">
+            <h4>زائر جديد</h4>
+            <p>أهلاً وسهلاً بك! 👋</p>
+        </div>
+        <button class="close-btn" onclick="closeWelcomeMessage()">×</button>
+    </div>
+</div>
+<script>
+// عرض رسالة الترحيب
+function showWelcomeMessage() {
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    
+    // إظهار الرسالة بعد 3 ثوانٍ
+    setTimeout(() => {
+        welcomeMessage.classList.add('show');
+        
+        // إخفاء الرسالة بعد ثانيتين
+        setTimeout(() => {
+            welcomeMessage.classList.remove('show');
+        }, 2000);
+    }, 3000);
+}
+
+// إغلاق الرسالة يدوياً
+function closeWelcomeMessage() {
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    welcomeMessage.classList.remove('show');
+}
+
+// تشغيل الرسالة عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', showWelcomeMessage);
+
+// تشغيل الرسالة عند تحديث الصفحة
+window.addEventListener('load', showWelcomeMessage);
+</script>
+
 </body>
 </html>
