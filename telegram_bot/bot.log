@@ -1,0 +1,13 @@
+2025-06-03 00:19:47,828 - __main__ - INFO - 🚀 بدء تشغيل بوت التفاعل التلقائي...
+2025-06-03 00:19:52,853 - __main__ - ERROR - ❌ خطأ في تشغيل البوت: Timed out
+2025-06-03 00:22:27,656 - __main__ - INFO - 🚀 بدء تشغيل بوت التفاعل التلقائي...
+2025-06-03 00:22:32,503 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7621960152:AAEtHlFO0WLXQlhzklpIrobAWPb0LUcu56I/getMe "HTTP/1.1 200 OK"
+2025-06-03 00:22:32,505 - telegram.ext.Application - INFO - Application started
+2025-06-03 00:22:32,899 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7621960152:AAEtHlFO0WLXQlhzklpIrobAWPb0LUcu56I/deleteWebhook "HTTP/1.1 200 OK"
+2025-06-03 00:22:32,901 - __main__ - INFO - ✅ البوت يعمل الآن!
+2025-06-03 00:22:32,902 - __main__ - ERROR - ❌ خطأ في تشغيل البوت: 'Updater' object has no attribute 'idle'
+2025-06-03 00:22:32,902 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-06-03 00:22:32,906 - telegram.ext.Application - INFO - Application.stop() complete
+2025-06-03 00:22:32,906 - __main__ - INFO - 🔄 تم إغلاق البوت
+2025-06-03 00:28:41,578 - __main__ - INFO - 🚀 بدء تشغيل بوت التفاعل التلقائي...
+2025-06-03 00:28:46,604 - __main__ - ERROR - ❌ خطأ في تشغيل البوت: Timed out
